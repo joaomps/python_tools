@@ -4,8 +4,8 @@ from datetime import datetime
 from oauth2client.service_account import ServiceAccountCredentials
 
 ## Crypto Requests ##
-api_key = "imD0FosdtgBCPGqnQBYi5fKPz3rWoHAhu3qsfqzM3HgwmiLpvUsnstdUnQiKklUP"
-api_secret = "TUpl9x29NK5FjIndjOLXVI3lhD6slUEqMhxP9PRZLGPWgoZgq5awA5Tl3rWXMukR"
+api_key = "123"
+api_secret = "123"
 
 client = Client(api_key, api_secret)
 prices = {}
@@ -21,18 +21,18 @@ def getUserPortfolio():
     for coin in info['balances']:
         if float(coin['free']) > 0.00:
             user_portfolio[coin["asset"]] = float(coin['free'])
-## Crypto Requests ##
 
+## Crypto Requests ##
 def updateSheets():
     updatePrices()
     getUserPortfolio()
 
     ## Sheets ##
     #credentials to the account
-    cred = ServiceAccountCredentials.from_json_keyfile_name('gprices-sheets-21cc2b749b1d.json') 
+    cred = ServiceAccountCredentials.from_json_keyfile_name('gprices-sheets-config.json') 
     # authorize the clientsheet 
     client = gspread.authorize(cred)
-    sheet = client.open("Personal Finance").get_worksheet_by_id(460688935)
+    sheet = client.open("Personal Finance").get_worksheet_by_id(123)
 
     for x in range(2,len(user_portfolio)+2):
         # update with coin name
