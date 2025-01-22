@@ -14,8 +14,8 @@ from discord_webhook import DiscordWebhook, DiscordEmbed
 from selenium.webdriver.firefox.options import Options as FirefoxOptions
 
 # discord webhook
-disc_url = 'https://discord.com/api/webhooks/927659893178130492/OYbIenE8hJoQiYuUzqBfYq_N_s2foDIWHwtd4Xthg_dBBqib4V0iwTpe1vNvwrDADDaP'
-not_url = 'https://discord.com/api/webhooks/875373041301979176/e35tViKLXyECqrFZgnZevBSyah0NpnuffoCeJK8Jd47qUaR62zMVcBln8ZSPkH40XAhK'
+disc_url = 'https://discord.com/api/webhooks/123/1234'
+not_url = 'https://discord.com/api/webhooks/123/1234'
 result = {}
 
 def send_disc_notification(user, price, platform):
@@ -29,7 +29,7 @@ def send_disc_notification(user, price, platform):
 
 def updateValuesG2G():
     # Start a chromedrive and load lxml
-    url='https://www.g2g.com/categories/wow-classic-tbc-gold-for-sale?region_id=ac3f85c1-7562-437e-b125-e89576b9a38e&fa=lgc_29076_server%3Algc_29076_server_40972,lgc_29076_server_41021,lgc_29076_server_41023&sort=lowest_price'
+    url='https://www.123.com/'
     options = FirefoxOptions()
     options.add_argument("--headless") 
     driver = webdriver.Firefox(options=options)
@@ -52,7 +52,7 @@ def updateValuesG2G():
 
 def updateValuesMMO():
     # Start a chromedrive and load lxml
-    url='https://www.mmobuyer.com/'
+    url='https://www.google.com/'
     options = FirefoxOptions()
     options.add_argument("--headless")
     driver = webdriver.Firefox(options=options)
